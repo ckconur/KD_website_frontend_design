@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    /* --primary-color: #2588f1; */
+    --primary-color: #4a25f1;
+    --danger-color: rgb(235, 8, 8);
+    --warning-color: rgb(236, 196, 14);
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+
+.navbar{
+    background-color: var(--primary-color);
+    text-align: center;
+    z-index: 999;
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.nav-logo{
+    height: 100%;
+    float: left;
+    transition: transform 250ms ease-in-out;
+}
+
+.nav-logo:hover{
+    transform: scale(1.1);
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    right: 50px;
+    margin-left: 1em;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+
+.nav-toggle-label{
+    font-size: 35px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: var(--primary-color);
+    
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2%;
+}
+
+nav ul li{
+    padding: 5px 20px;
+}
+
+nav a{
+    color: white;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 24px;
+}
+
+nav ul li a{
+    font-weight: lighter;
+    position: relative;
+}
+
+nav div{
+    justify-content: center;
+}
+
+
+nav ul a::before{
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: -5%;
+    width: 110%;
+    border-bottom: 1px solid white;
+    transform: scaleX(0);
+    transition: all 500ms ease-in-out;
+}
+
+nav ul a:hover::before{
+    transform: scaleX(1);
+}
+
+/* Showcase */
+
+header{
+    height: 700px;
+    background-color: var(--primary-color);
+    border-top: 1px solid white;
+    position: relative;
+}
+
+header h1{
+    font-size: 48px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.showcase-images{
+    height: 60%;
+    position: relative;
+}
+
+header img{
+    border-radius: 25px;
+    position: absolute;
+    height: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    transition: all 1000ms ease-in-out;
+}
+
+header img:nth-of-type(1){
+    z-index: 99;
+    top: -60px;
+}
+
+header img:nth-of-type(2){
+    z-index: 100;
+    top: -25px;
+    left: 30%;
+}
+
+header img:hover{
+    transform: scale(1.05);
+    z-index: 101;
+}
+
+/* Comments */
+
+.comments{
+    margin-top: 100px;
+    height: 500px;
+
+}
+
+.random-comments{
+    width: 60%;
+    height: 100%;
+}
+
+.random-employers{
+    width: 40%;
+}
+
+.random-employers .card{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px 10px 20px 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.random-employers .card-image{
+    width: 150px;
+    margin: 10px auto 10px auto;
+}
+
+.random-employers .card-title{
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.random-employers .card-content{
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+/* Slider */
+
+.mySlides{
+    height: 100%;
+}
+
+.mySlides > div{
+    height: 100%;
+}
+
+.slide-logo{
+    width: 150px;
+    margin: 15px auto;
+}
+
+.slide-comment{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+/* Register Page */
+
+.register-page{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);    
+}
+
+/* Login Page */
+
+.login-page{
+    height: 100vh;
+}
+
+.login-page img{
+    height: 150px;
+}
+
+.login-page div{
+    width: 300px;
+}
+
+.login-page div:nth-of-type(4) a{
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.login-page div input{
+    height: 30px;
+    width: 300px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 2px 2px 0 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding-left: 10px;
+    border-bottom: solid 2px black;
+    position: relative;
+    transition: all 250ms ease-in-out;
+}
+
+.login-page div label{
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    transform: translate(10px,-100%);
+    transition: all 250ms ease-in-out;
+    transform-origin: left;    
+}
+
+.login-page input:focus,
+.login-page input:hover{
+    border-color: var(--primary-color);
+}
+
+.login-page input:focus ~ label{
+    color: var(--primary-color);
+}
+
+/* Comments Page */
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+    .p-standart{
+    padding: 10px 3% 10px 3%;
+    }
+
+    .nav-toggle-label{
+        position: absolute;
+        top: 0;
+        right: 50px;
+        margin-left: 1em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .nav-toggle:checked ~ nav {
+        transform: scale(1,1);
+    }
+
+    nav {
+        position: absolute;
+        text-align: left;
+        top: 100%;
+        left: 0;
+        background-color: var(--primary-color);
+        width: 100%;
+        display: block;
+        height: initial;
+        border-bottom: 1px solid white;
+        padding: 25px 0 10px 0;
+        transform: scale(1,0);
+        transition: transform 500ms ease-in-out;
+        transform-origin: top;
+    }
+
+    nav ul{
+        display: block;
+        list-style: none;
+        padding: 0 3% 0 3%;
+    }
+
+    nav ul li{
+        padding-left: 0;
+    }
+
+    nav ul li a{
+        font-weight: bolder;
+    }
+
+    nav > div {
+        border-top: 1px solid rgba(255 , 255, 255, 0.2);
+        padding-top: 10px;
+    }
+
+    header{
+        height: initial;
+        background-color: var(--primary-color);
+        border-top: 1px solid white;
+        position: static;
+    }
+    
+    .showcase-images{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 50px 0;
+        position: static;
+    }
+    
+    header img{
+        position: static;
+        height: 250px;
+        transition: all 1000ms ease-in-out;
+        margin: 20px auto 0 auto;
+    }
+    
+    header img:nth-of-type(1){
+        z-index: auto;
+    }
+    
+    header img:nth-of-type(2){
+        z-index: auto;
+    }
+    
+    header img:hover{
+        transform: scale(1.05);
+        z-index: auto;
+    }
+
+    .random-employers{
+        display: none !important;
+    }
+
+    .random-comments{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .register-page{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

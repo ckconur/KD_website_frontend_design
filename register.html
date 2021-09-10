@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/mystyle.css">
+    <link rel="stylesheet" href="/css/utilities.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+
+    <div class="navbar p-standart">
+        <a href="index.html"><img class="nav-logo" src="/images/kd_logo_white.png" alt=""></a>
+        <input type="checkbox" name="" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li><a href="#">KULLANICI YORUMLARI</a></li>
+                <li><a href="#">FİYATLAR</a></li>
+                <li><a href="#">KAYNAKLAR</a></li>
+            </ul>
+            <div class="d-flex">
+                <a href="register.html" class="btn clr-primary mx-2">ÜCRETSİZ DENE</a>
+                <a href="login.html" class="btn btn-outline-white clr-white">GİRİŞ YAP</a>
+            </div>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <Span><i class="fas fa-bars clr-white"></i></Span>
+        </label>
+    </div>
+
+    <!-- Form -->
+
+    <section class="register-page mb-4">
+        <div class="p-standart">
+            <div class="txt-center">
+                <h1 class="my-2">Şirketlerinizi yönetmenin yeni yolu</h1>
+                <span class="my-1">Kayıt yaptırarak 15 gün ücretsiz deneyebilirsiniz.</span>
+                <div class="d-flex jc-center ai-center mt-2">
+                    <span>Zaten bir üyeliğiniz var mı?</span>
+                    <a href="login.html" class="btn btn-primary mx-2">GİRİŞ YAP</a>
+                </div>
+            </div>
+            <div class="form-group px-4">
+                <div class="my-3 width-100 floating-label">
+                    <input class="form-control width-100" type="text" id="firstName">
+                    <label class="label" for="firstName">Ad</label>
+                </div>
+                <div class="mb-3 width-100 floating-label">
+                    <input class="form-control width-100" type="text" id="lastName">
+                    <label class="label" for="lastName">Soyad</label>
+
+                </div>
+                <div class="mb-3 width-100 floating-label">
+                    <input class="form-control width-100" type="text" id="companyPhone">
+                    <label class="label" for="companyPhone">Şirket Telefonu</label>
+
+                </div>
+                <div class="mb-3 width-100 floating-label">
+                    <input class="form-control width-100" type="text" id="companyMail">
+                    <label class="label" for="companyMail">Şirket Mailiniz</label>
+
+                </div>
+                <div class="mb-3 width-100 floating-label">
+                    <input class="form-control width-100" type="text" id="companyName">
+                    <label class="label" for="companyName">Şirket Adı</label>
+
+                </div>
+                <div class="mb-3 width-100 floating-label">
+                    <input class="form-control width-100" type="text" id="password">
+                    <label class="label" for="password">Şifre</label>
+
+                </div>
+                <div class="mb-3 width-100">
+                    <a href="#" class="btn btn-primary py-1">Kayıt Ol</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-standart bg-primary clr-white pb-4">
+            <div class="mySlides">
+                <div class="d-flex flex-column jc-between">
+                    <img class="slide-logo"
+                        src="https://w7.pngwing.com/pngs/27/566/png-transparent-logo-spole%C4%8Dnosti-apple-logo-spole%C4%8Dnosti-apple-apple-heart-computer-logo.png"
+                        alt="">
+                    <span class="slide-comment">"Çalışanlarımın izin taleplerini onaylamıyorum, zaten benim yüzümü gören
+                        yok?"</span>
+                    <div class="company-manager">
+                        <h1>Onur Çekiç</h1>
+                        <span>Şirket Yöneticisi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="d-flex flex-column jc-between">
+                    <img class="slide-logo"
+                        src="https://w7.pngwing.com/pngs/224/696/png-transparent-nike-logo-movement-brands-black.png"
+                        alt="">
+                    <span class="slide-comment">"Çalışanlarıma değer verdiğim için bu platformu kullanıyorum."</span>
+                    <div class="company-manager">
+                        <h1>Kübra Coşkun</h1>
+                        <span>Şirket Yöneticisi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="d-flex flex-column jc-between">
+                    <img class="slide-logo"
+                        src="https://seeklogo.com/images/K/kahve-dunyasi-logo-65084B42BA-seeklogo.com.png" alt="">
+                    <span class="slide-comment">"Hızlı, kolay ve efektif yönetim sağlamak için kullanıyorum."</span>
+                    <div class="company-manager">
+                        <h1>Ayşenur Uğur</h1>
+                        <span>Şirket Yöneticisi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

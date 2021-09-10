@@ -1,0 +1,377 @@
+/* Utilities */
+
+/* Buttons */
+
+.btn {
+    display: block;
+    padding: 5px 20px;
+    border-radius: 25px;
+    text-align: center;
+    white-space: nowrap;
+    background-color: white;
+    color: var(--primary-color);
+    transition: all 250ms ease-in-out;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-outline-white{
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.btn-outline-primary{
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.btn-xl{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 60px;
+    width: 60%;
+}
+
+/* Background Colors */
+
+.bg-white{
+    background-color: #fff;
+}
+
+.bg-primary{
+    background-color: var(--primary-color);
+}
+
+/* Colors */
+
+.clr-white{
+    color: #fff;
+}
+
+.clr-primary{
+    color: var(--primary-color);
+}
+
+/* Displays */
+
+.d-flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.d-grid{
+    display: grid;
+}
+
+.d-none{
+    display: none;
+}
+
+.jc-center{
+    justify-content: center;
+}
+
+.jc-between{
+    justify-content: space-between;
+}
+
+.jc-around{
+    justify-content: space-around;
+}
+
+.jc-end{
+    justify-content: flex-end;
+}
+
+.ai-center{
+    align-items: center;
+}
+
+.ai-start{
+    align-items: flex-start;
+}
+
+.ai-end{
+    align-items: flex-end;
+}
+
+/* Float */
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+/* Margin */
+
+.mx-0{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.mx-1{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.mx-2{
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+.mx-3{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.mx-4{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-0{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.my-1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.my-2{
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.my-3{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.my-4{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.mt-0{
+    margin-top: 0;
+}
+
+.mt-1{
+    margin-top: 1rem;
+}
+
+.mt-2{
+    margin-top: 1.25rem;
+}
+
+.mt-3{
+    margin-top: 1.5rem;
+}
+
+.mt-4{
+    margin-top: 2.5rem;
+}
+
+.mb-0{
+    margin-bottom: 0;
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.mb-2{
+    margin-bottom: 1.25rem;
+}
+
+.mb-3{
+    margin-bottom: 1.5rem;
+}
+
+.mb-4{
+    margin-bottom: 2.5rem;
+}
+
+/* Paddings */
+
+.p-standart{
+    padding: 10px 5% 10px 5%;
+}
+
+.px-0{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.px-1{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.px-2{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.px-3{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.px-4{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.py-0{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.py-1{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-2{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.py-3{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.py-4{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.pb-0{
+    padding-bottom: 0;
+}
+
+.pb-1{
+    padding-bottom: 1rem;
+}
+
+.pb-2{
+    padding-bottom: 1.25rem;
+}
+
+.pb-3{
+    padding-bottom: 1.5rem;
+}
+
+.pb-4{
+    padding-bottom: 2.5rem;
+}
+
+/* Text */
+
+.txt-center{
+    text-align: center;
+}
+
+/* Size */
+
+.width-100{
+    width: 100%;
+}
+
+.width-75{
+    width: 75%;
+}
+.width-50{
+    width: 50%;
+}
+.width-25{
+    width: 25%;
+}
+
+.height-100{
+    height: 100%;
+}
+.height-75{
+    height: 75%;
+}
+.height-50{
+    height: 50%;
+}
+.height-25{
+    height: 25%;
+}
+
+/* Form */
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-control{
+    padding: 12px 20px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    transition: all 250ms ease-in-out;
+}
+
+.floating-label{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.floating-label label{
+    position: absolute;
+    left: 5%;
+    font-size: 12px;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.2);
+    transition: all 250ms ease-in-out;
+}
+
+.form-control:hover,
+.form-control:focus{
+    border-color: var(--primary-color);
+}
+
+.form-control:hover~label{
+    color: black;
+}
+
+.form-control:focus~label{
+    color: var(--primary-color);
+    background-color: white;
+    transform: translateY(-150%);
+}
