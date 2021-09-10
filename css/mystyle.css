@@ -2,7 +2,8 @@
 
 :root{
     /* --primary-color: #2588f1; */
-    --primary-color: #4a25f1;
+    --primary-color: rgba(74,37,241,1);
+    --primary-color-half: rgba(74,37,241,0.5);
     --primary-darker-color: rgba(33,16,108,1);
     --danger-color: rgb(235, 8, 8);
     --warning-color: rgb(236, 196, 14);
@@ -144,12 +145,13 @@ header img{
 
 header img:nth-of-type(1){
     z-index: 99;
+    left: 10%;
     top: -60px;
 }
 
 header img:nth-of-type(2){
     z-index: 100;
-    top: -25px;
+    top: -10px;
     left: 30%;
 }
 
@@ -158,17 +160,62 @@ header img:hover{
     z-index: 101;
 }
 
+/* Functionality */
+
+.functionality{
+    height: 550px;
+    min-height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    background: linear-gradient(var(--primary-color), var(--primary-color-half));
+    padding-top: 150px !important;
+    padding-bottom: 50px !important;
+}
+
+.functionality .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    border-radius: 15px;
+    transition: all 250ms ease-in-out;
+}
+
+.functionality .card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(121, 70, 70, 0.2);
+}
+
+.functionality .card-image{
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.functionality .card-title{
+    margin-bottom: 10px;
+}
+
 /* Comments */
 
 .comments{
-    margin-top: 100px;
+    margin-top: 150px;
+    margin-bottom: 150px;
     height: 500px;
-
 }
 
 .random-comments{
     width: 60%;
     height: 100%;
+}
+
+.random-comments > h1{
+    color: var(--primary-darker-color);
+    font-size: 30px;
+    font-weight: 500;
+    font-style: italic;
 }
 
 .random-employers{
@@ -352,7 +399,29 @@ header img:hover{
 
 
 
+/* Footer */
+
+footer {
+    height: 20px;
+    background-color: var(--primary-color);
+}
+
 /* Media Queries */
+
+@media screen and (max-width: 1378px) {
+    header img:nth-of-type(1){
+        z-index: 99;
+        left: 5%;
+        top: -60px;
+    }
+    
+    header img:nth-of-type(2){
+        z-index: 100;
+        top: -10px;
+        left: 23%;
+    }
+}
+
 
 @media screen and (max-width: 1200px) {
     .p-standart{
@@ -451,12 +520,27 @@ header img:hover{
     .random-comments{
         width: 100%;
     }
+
+    .comments{
+        margin-top: 50px;
+    }
 }
 
 @media screen and (max-width: 900px) {
     .register-page{
         display: grid;
         grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .functionality{
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 60px;
+        padding-top: 0 !important;
+        padding-bottom: 50px !important;
     }
 }
 
