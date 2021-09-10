@@ -11,6 +11,19 @@
 </head>
 
 <body>
+    <div class="modal" id="forgetPasswordModal">
+        <div class="modal-inside">
+            <span class="btnCloseModal" onclick="closeModal('forgetPasswordModal')">&times;</span>
+            <div class="modal-content">
+                <!-- Put What u Want -->
+                <label for="newPasswordMail" class="mb-3">Lütfen sistemde kayıtlı olan mail adresinizi girin.</label>
+                <input type="mail" class="mb-3" id="newPasswordMail">
+
+                <a class="btn btn-white btn-md mx-auto">Maile Yenileme Linki Gönder</a>
+            </div>
+        </div>
+    </div>
+
     <section class="login-page d-flex flex-column jc-center ai-center">
         <a href="index.html"><img class="mb-3 nav-logo" src="/images/kd_logo.png" alt=""></a>
             <div class="my-4 d-flex flex-column">
@@ -22,14 +35,15 @@
                 <label for="email">Parola</label>
             </div>
             <div class="mb-1">
-                <button type="button" class="btn btn-outline-primary width-100">Giriş Yap</button>
+                <button type="button" class="btn btn-outline-primary width-100" id="btnForgetPassword">Giriş Yap</button>
             </div>
         <div>
-            <a href="#">Şifremi unuttum.</a>
+            <a href="#" onclick="openModal('forgetPasswordModal')">Şifremi unuttum.</a>
         </div>
     </section>
 
-
+    
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
