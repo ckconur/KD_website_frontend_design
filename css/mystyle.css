@@ -440,6 +440,74 @@ header img:hover{
     width: 25%;
 }
 
+/* Company Manager Main Page */
+.com-manager-page{
+    display: flex;
+}
+
+.com-manager-page .side-bar{
+    width: max-content;
+    height: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    position: sticky;
+}
+
+.side-bar > div{
+    display: flex;
+    justify-content: space-around;
+    margin: 0  0 15px 0;
+    padding-top: 15px;
+}
+
+.side-bar > div img{
+    height: 75px;
+}
+
+.side-bar hr{
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+
+}
+
+.side-bar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bar ul li{
+    padding: 20px 60px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+.side-bar i{
+    margin-right: 15px;
+}
+
+
+.side-bar ul li:hover{
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.com-manager-page .content{
+    width: 100%;
+}
+
+.com-manager-page .header{
+    background-color: black;
+    width: 100%;
+    height: 1500px;
+}
+
+.com-manager-page .employee-details{
+    background-color: black;
+    width: 100%;
+    height: 250px;
+}
+
 /* Footer */
 
 footer {

@@ -123,6 +123,10 @@
     align-items: flex-end;
 }
 
+.as-center{
+    align-self: center;
+}
+
 /* Float */
 
 .float-left{
@@ -188,6 +192,11 @@
 .my-4{
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
+}
+
+.my-auto{
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .mt-0{
