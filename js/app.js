@@ -29,9 +29,11 @@ function closeModal(modalId){
 
 function outsideClick(ev){
     let modal = document.getElementsByClassName('modal')[0];
-    let modalId = modal.id;
-    if (ev.target.id == modalId) {
-        modal.style.display = 'none';
+    if (modal !== undefined) {
+        let modalId = modal.id;
+        if (ev.target.id == modalId) {
+            modal.style.display = 'none';
+        }
     }
 }
 

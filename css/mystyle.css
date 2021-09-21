@@ -397,7 +397,48 @@ header img:hover{
 
 /* Comments Page */
 
+.comments-page{
+    padding: 0 15% 0 15%;
+}
 
+.comments-page .card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 100px;
+}
+
+.comments-page .card .card-image{
+    height: 500px;
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+.comments-page .card .card-details{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+}
+
+.comments-page .card .card-logo{
+    width: 40px;
+}
+
+.comments-page .card .card-details div{
+    display: flex;
+    flex-direction: column;
+}
+
+.comments-page .card .card-content{
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 20px;    
+}
+
+.comments-page .card .card-details button{
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
 
 /* Footer */
 
@@ -483,6 +524,10 @@ footer {
         background-color: var(--primary-color);
         border-top: 1px solid white;
         position: static;
+    }    
+
+    header div:nth-of-type(2){
+        display: flex !important;
     }
     
     .showcase-images{
@@ -523,6 +568,27 @@ footer {
 
     .comments{
         margin-top: 50px;
+    }
+
+    .functionality{
+        padding-top: 0 !important;
+    }
+}
+
+@media screen and (max-width: 978px) {
+    .comments-page .card{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 100px;
+    }
+
+    .comments-page .card .card-image{        
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .comments-page .card .card-details{
+        margin-left: 0;
     }
 }
 
