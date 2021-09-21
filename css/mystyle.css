@@ -450,7 +450,6 @@ header img:hover{
     height: 100%;
     background-color: var(--primary-color);
     color: white;
-    position: sticky;
 }
 
 .side-bar > div{
@@ -486,27 +485,89 @@ header img:hover{
     margin-right: 15px;
 }
 
-
 .side-bar ul li:hover{
     background-color: white;
     color: var(--primary-color);
 }
 
 .com-manager-page .content{
-    width: 100%;
+    width: 100%; 
+
+}
+
+.com-manager-page .content hr{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.com-manager-page .header h2{
+    font-size: 21px;
+    font-weight: 600;
+    font-size: 27px;
+}
+.com-manager-page .header span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(99, 99, 99);
 }
 
 .com-manager-page .header{
-    background-color: black;
+    padding-left: 50px;
+    margin: 0  0 15px 0;
+    padding-top: 15px;
+}
+
+.com-manager-page .remaining-day{
     width: 100%;
-    height: 1500px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 15px 50px 0 50px;
 }
 
 .com-manager-page .employee-details{
-    background-color: black;
-    width: 100%;
-    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(250px, auto);
+    padding: 50px 50px;
+    row-gap: 25px;
+    column-gap: 25px;
 }
+
+.com-manager-page .content .card{
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    min-height: 250px;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--primary-darker-color);
+}
+
+.com-manager-page .content .card h3{
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: .5px;
+    font-weight: 400;
+}
+
+.com-manager-page .content .card h3 i{
+    margin-right: 10px;
+    
+}
+
+
+.com-manager-page .content .chart-card{
+    grid-row: 1/3;
+}
+
+.com-manager-page .content .card-header{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* Footer */
 
