@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
     /* --primary-color: #2588f1; */
     --primary-color: rgb(70, 35, 223);
@@ -19,7 +18,7 @@
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Navbar */
@@ -445,11 +444,12 @@ header img:hover{
     display: flex;
 }
 
-.com-manager-page .side-bar{
+.side-bar{
     width: max-content;
     height: 100%;
     background-color: var(--primary-color);
     color: white;
+    min-height: 100vh;
 }
 
 .side-bar > div{
@@ -471,36 +471,35 @@ header img:hover{
 }
 
 .side-bar ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
 }
 
-.side-bar ul li{
+.side-bar ul li a{
+    display: block;
     padding: 20px 60px;
-    cursor: pointer;
-    transition: all 500ms ease-in-out;
+    color: #fff;
+    text-decoration: none;
 }
+
 .side-bar i{
     margin-right: 15px;
 }
 
-.side-bar ul li:hover{
-    background-color: white;
+.side-bar ul li a:hover{
     color: var(--primary-color);
+    background-color: #fff;
 }
 
-.com-manager-page .content{
+.content{
     width: 100%;
 
 }
 
-.com-manager-page .content hr{
+.content hr{
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.com-manager-page .content .header{
+.content .header{
     padding-left: 50px;
     padding-right: 50px;
     margin: 0  0 15px 0;
@@ -508,24 +507,24 @@ header img:hover{
     position: relative;
 }
 
-.com-manager-page .header h2{
+.header h2{
     font-size: 21px;
     font-weight: 600;
     font-size: 27px;
 }
-.com-manager-page .header span{
+.header span{
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     color: rgb(99, 99, 99);
 }
 
-.com-manager-page .header i{
+.header i{
     color: var(--primary-color);
     display: none;
 }
 
-.com-manager-page .header .dropdown-task{
+.header .dropdown-task{
     position: absolute;
     right: 50px;
     top: 135%;
@@ -543,27 +542,28 @@ header img:hover{
     margin: auto 0;
 }
 
-.com-manager-page .header .dropdown-task ul{
+.header .dropdown-task ul{
     list-style: none;
     margin: 0;
     padding: 10px 10px;
 }
-
-.com-manager-page .header .dropdown-task ul li{
+.header .dropdown-task ul li a{
     padding: 5px 15px;
     color: #fff;
+    display: block;
+    text-decoration: none;
 }
 
-.com-manager-page .header .dropdown-task ul li:hover{
+.header .dropdown-task ul li a:hover{
     background-color: #fff;
     color: var(--primary-color);
     cursor: pointer;
 }
-.com-manager-page .header .dropdown-task ul li i{
-    margin: 0 10px 0 0;
+.header .dropdown-task ul li i{
+    margin-right: 10px;
 }
 
-.com-manager-page .remaining-day{
+.remaining-day{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -613,6 +613,11 @@ header img:hover{
     justify-content: space-between;
 }
 
+/* List Page */
+
+.listpage .content div:nth-of-type(2){
+    border: black;
+}
 
 /* Footer */
 
@@ -788,7 +793,7 @@ footer {
 
     .com-manager-page .employee-details{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -801,39 +806,30 @@ footer {
         padding-top: 0 !important;
         padding-bottom: 50px !important;
     }
-
-    .com-manager-page .employee-details{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
 }
 
 @media screen and (max-width: 600px) {
-    .com-manager-page .employee-details{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
 
-    .com-manager-page .content .header{
+    .content .header{
         display: flex;
         justify-content: space-between;
     }
 
-    .com-manager-page .content .header i{
+    .content .header i{
         display: inline;
         cursor: pointer;
         transition: all 250ms ease-in-out;
     }
 
-    .com-manager-page .content .header i:hover{
+    .content .header i:hover{
         transform: scale(1.1);
     }
 
-    .com-manager-page .side-bar{
+    .side-bar{
         display: none;
     }
 
-    .com-manager-page .header .dropdown-task{
+    .header .dropdown-task{
         display: block;
         transform: scale(1, 0);
     }
