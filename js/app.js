@@ -85,3 +85,17 @@ function makeChart() {
     })
 }
 
+let btnloadMore = document.getElementById('btnLoadMore');
+btnloadMore.addEventListener('click', () => {
+
+    let otherCommentsSection = document.getElementsByClassName('comment-others')[0];
+    console.log(otherCommentsSection);
+    let div = document.createElement('div');
+    div.classList = 'comment-card';
+    div.innerHTML = `<img src="https://pbs.twimg.com/profile_images/1386230357897383938/P5OdLQaO_400x400.jpg" alt="">
+    <a href="#" class="my-2">
+        <h5 class="mb-2">Jason Statham</h5>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ducimus!</span>
+    </a>`;
+    otherCommentsSection.appendChild(div);
+})

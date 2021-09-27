@@ -292,40 +292,6 @@ header img:hover{
     text-decoration: none;
     color: var(--primary-color);
 }
-
-.login-page div input{
-    height: 30px;
-    width: 300px;
-    outline: none;
-    box-shadow: none;
-    border: none;
-    border-radius: 2px 2px 0 0;
-    background-color: rgba(0, 0, 0, 0.05);
-    padding-left: 10px;
-    border-bottom: solid 2px black;
-    position: relative;
-    transition: all 250ms ease-in-out;
-}
-
-.login-page div label{
-    font-size: 14px;
-    letter-spacing: 1px;
-    line-height: 30px;
-    position: absolute;
-    transform: translate(10px,-100%);
-    transition: all 250ms ease-in-out;
-    transform-origin: left;    
-}
-
-.login-page input:focus,
-.login-page input:hover{
-    border-color: var(--primary-color);
-}
-
-.login-page input:focus ~ label{
-    color: var(--primary-color);
-}
-
 /* Forget Password Modal */
 
 .modal{
@@ -470,9 +436,6 @@ header img:hover{
 
 }
 
-.side-bar ul{
-}
-
 .side-bar ul li a{
     display: block;
     padding: 20px 60px;
@@ -532,6 +495,7 @@ header img:hover{
     display: none;
     transition: all 500ms ease-in-out;
     transform-origin: top;
+    z-index: 999;
 }
 
 .dropdown-toggle{
@@ -617,6 +581,73 @@ header img:hover{
 
 .listpage .content div:nth-of-type(2){
     border: black;
+}
+
+/* Comment Detail Page */
+
+.comment-detail-page{
+    padding: 50px 150px;
+}
+
+.comment-company-detail{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.comment-company-detail div{
+    text-align: left;
+}
+
+.comment-detail-page .comment{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    column-gap: 75px;
+    word-wrap: break-word;
+}
+
+.comment .comment-text{
+    padding-right: 75px;
+    line-height: 24px;
+    font-size: larger;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+.comment-others{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.comment-card{
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.comment-card > img{
+    margin-bottom: auto;
+    max-width: 250px;
+    transition: all 400ms ease-in-out;
+}
+
+.comment-card:hover > img{
+    transform: scale(1.02);
+}
+
+.comment-card a{
+    text-decoration: none;
+    color: black;
+    transition: all 500ms ease-in-out;
+}
+
+.comment-card a:hover{
+    color: var(--primary-color);
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -782,6 +813,10 @@ footer {
 
     .comments-page .card .card-details{
         margin-left: 0;
+    }
+
+    .form-group{
+        padding: 0 !important;
     }
 }
 

@@ -16,6 +16,7 @@
     font-size: 14px;
     cursor: pointer;
     outline: none;
+    letter-spacing: 1px;
 }
 
 .btn-primary{
@@ -26,6 +27,11 @@
 .btn-white{
     color: var(--primary-color);
     background-color: white;
+}
+
+.btn-danger{
+    color: white;
+    background-color: var(--danger-color);    
 }
 
 .btn-outline-white{
@@ -400,6 +406,42 @@
     transform: translateY(-150%);
 }
 
+
+
+.square-input{
+    height: 30px;
+    width: 300px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 2px 2px 0 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding-left: 10px;
+    border-bottom: solid 2px black;
+    position: relative;
+    transition: all 250ms ease-in-out;
+}
+
+.square-input-label{
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: absolute;
+    transform: translate(10px,-100%);
+    transition: all 250ms ease-in-out;
+    transform-origin: left;    
+}
+
+.square-input:focus,
+.square-input:hover{
+    border-color: var(--primary-color);
+}
+
+.square-input:focus ~ label{
+    color: var(--primary-color);
+}
+
+
 /* Tables */
 
 .table {
@@ -443,3 +485,16 @@
     color: var(--primary-color);
 }
 
+/* Font Weight */
+
+.fw-bold{
+    font-weight: bold;
+}
+
+.fw-light{
+    font-weight: lighter;
+}
+
+.fw-bolder{
+    font-weight: bolder;
+}
