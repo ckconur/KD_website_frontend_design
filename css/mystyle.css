@@ -608,6 +608,40 @@ header img:hover{
     display: none;
 }
 
+/* Employee Edit Panel */
+
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.tabs a{
+    text-decoration: none;
+    color: rgba(53, 53, 53, 0.603);
+    padding-bottom: 10px;
+    margin-right: 1.25rem;
+}
+
+.tabs a:active{
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.tabs a:hover{
+    color: black;
+}
+
+.employee-detail-section{
+    display: grid;
+    grid-template-columns: 30%  auto;
+    gap: 25px;
+}
+
+.employee-detail-section > .c-card:last-of-type .c-card-body{
+    padding: 25px 0;
+    height: 100%;
+}
+
 /* Comment Detail Page */
 
 .comment-detail-page{
@@ -792,6 +826,10 @@ footer {
     .com-manager-page .employee-details{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }    
+
+    .employee-detail-section{
+        grid-template-columns: repeat(1 ,1fr);
     }
 }
 
