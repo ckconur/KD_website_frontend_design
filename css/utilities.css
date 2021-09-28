@@ -35,6 +35,11 @@
     background-color: var(--danger-color);    
 }
 
+.btn-success{
+    color: white;
+    background-color: var(--success-color);    
+}
+
 .btn-outline-white{
     background-color: transparent;
     border: 1px solid white;
@@ -535,12 +540,12 @@
     cursor: default;
 }
 
-.table tbody td a {
+.table tbody tr td:first-child a {
     text-decoration: none;
     color: #333;
 }
 
-.table tbody td a:hover{
+.table tbody tr td:first-child a:hover{
     color: var(--primary-color);
 }
 

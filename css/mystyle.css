@@ -5,8 +5,10 @@
     --primary-color-half: rgba(74,37,241,0.5);
     --primary-darker-color: rgba(33,16,108,1);
     --danger-color: rgb(235, 8, 8);
+    --success-color: rgb(89, 160, 7);
     --warning-color: rgb(236, 196, 14);
     --lightblue-color: rgba(37,158,241);
+
 }
 
 *,
@@ -541,7 +543,7 @@ header img:hover{
 
 .com-manager-page .employee-details{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(250px, auto);
     padding: 50px 50px;
     row-gap: 25px;
