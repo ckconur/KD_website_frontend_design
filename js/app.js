@@ -54,7 +54,7 @@ function makeChart() {
                     105000,
                     950000
                 ],
-                backgroundColor:[
+                backgroundColor: [
                     '#317F6E',
                     '#CCAA43',
                     '#24549E',
@@ -80,7 +80,12 @@ function makeChart() {
             }]
         },
         options: {
-
+            plugins:{
+                legend: {
+                    display: false,
+                    position: 'top',
+                }
+            }
         }
     })
 }

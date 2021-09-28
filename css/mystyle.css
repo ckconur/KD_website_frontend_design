@@ -345,6 +345,7 @@ header img:hover{
     padding-left: 20px;
     font-size: 16px;
     color: var(--lightblue-color);
+    font-weight: bold;
 }
 
 .modal-content label{
@@ -416,6 +417,7 @@ header img:hover{
     background-color: var(--primary-color);
     color: white;
     min-height: 100vh;
+    padding: 5px;
 }
 
 .side-bar > div{
@@ -463,13 +465,15 @@ header img:hover{
 }
 
 .content .header{
-    padding-left: 50px;
-    padding-right: 50px;
     margin: 0  0 15px 0;
     padding-top: 15px;
     position: relative;
 }
 
+.content div{
+    padding-left: 50px;
+    padding-right: 50px;
+}
 .header h2{
     font-size: 21px;
     font-weight: 600;
@@ -583,6 +587,15 @@ header img:hover{
     border: black;
 }
 
+.listpage .card-grid{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    justify-items: center;
+    width: 100%;
+    padding: 0 !important;
+}
+
 /* Comment Detail Page */
 
 .comment-detail-page{
@@ -620,35 +633,6 @@ header img:hover{
     gap: 50px;
 }
 
-.comment-card{
-    padding: 0 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.comment-card > img{
-    margin-bottom: auto;
-    max-width: 250px;
-    transition: all 400ms ease-in-out;
-}
-
-.comment-card:hover > img{
-    transform: scale(1.02);
-}
-
-.comment-card a{
-    text-decoration: none;
-    color: black;
-    transition: all 500ms ease-in-out;
-}
-
-.comment-card a:hover{
-    color: var(--primary-color);
-    transform: scale(1.05);
-}
 
 /* Footer */
 

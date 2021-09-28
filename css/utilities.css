@@ -245,6 +245,14 @@
     margin-bottom: 2.5rem;
 }
 
+.mr-1{
+    margin-right: 1rem;
+}
+
+.mr-2{
+    margin-right: 2.5rem;
+}
+
 /* Paddings */
 
 .p-standart{
@@ -484,6 +492,91 @@
     font-weight: bold;
     color: var(--primary-color);
 }
+
+/* Clickable Card */
+
+.c-card{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 250px;
+    min-height: 250px;
+    transition: all 250ms ease-in-out;
+}
+
+.c-card-header{
+    padding: 5px 0 10px 0;    
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: solid 0.5px rgba(0, 0, 0, 0.05);
+    transition: all 250ms ease-in-out;
+}
+
+.c-card-header img{
+    max-width: 100px;
+}
+
+.c-card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.c-card-body span:first-of-type{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.c-card-body span{
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.c-card:hover,
+.c-card:hover .c-card-header{
+    border-color: var(--primary-color-half);
+}
+
+/* Comment Card */
+
+.comment-card{
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.comment-card > img{
+    margin-bottom: auto;
+    max-width: 250px;
+    transition: all 400ms ease-in-out;
+}
+
+.comment-card:hover > img{
+    transform: scale(1.02);
+}
+
+.comment-card a{
+    text-decoration: none;
+    color: black;
+    transition: all 500ms ease-in-out;
+}
+
+.comment-card a:hover{
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
 
 /* Font Weight */
 
