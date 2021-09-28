@@ -470,7 +470,7 @@ header img:hover{
     position: relative;
 }
 
-.content div{
+.content > div{
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -583,6 +583,14 @@ header img:hover{
 
 /* List Page */
 
+.func-list-page{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .listpage .content div:nth-of-type(2){
     border: black;
 }
@@ -594,6 +602,10 @@ header img:hover{
     justify-items: center;
     width: 100%;
     padding: 0 !important;
+}
+
+#employee-table{
+    display: none;
 }
 
 /* Comment Detail Page */
@@ -804,7 +816,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 875px) {
     .register-page{
         display: grid;
         grid-template-columns: 1fr;
@@ -813,6 +825,20 @@ footer {
     .com-manager-page .employee-details{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .listpage .func-list-page > input{
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .listpage .func-list-page .radio-group{
+        width: 100%;
+    }
+
+    .listpage .func-list-page .radio-group button{
+        width: 75%;
+        margin-left: auto;
     }
 }
 
@@ -834,6 +860,16 @@ footer {
         justify-content: space-between;
     }
 
+    .content .header > h2{
+        display: none;
+    }
+
+    .content .header > span{
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+    }
+
     .content .header i{
         display: inline;
         cursor: pointer;
@@ -842,6 +878,11 @@ footer {
 
     .content .header i:hover{
         transform: scale(1.1);
+    }
+
+    .content > div{
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .side-bar{
