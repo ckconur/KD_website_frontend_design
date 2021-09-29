@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
     /* --primary-color: #2588f1; */
-    --primary-color: rgb(70, 35, 223);
-    --primary-color-half: rgba(74,37,241,0.5);
+    --primary-color: rgb(35, 115, 219);
+    --primary-color-half: rgba(35, 115, 219,0.5);
     --primary-darker-color: rgba(33,16,108,1);
     --danger-color: rgb(235, 8, 8);
     --success-color: rgb(89, 160, 7);
@@ -293,74 +293,6 @@ header img:hover{
     font-size: 12px;
     text-decoration: none;
     color: var(--primary-color);
-}
-/* Forget Password Modal */
-
-.modal{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background: rgb(37,158,241);
-    background: linear-gradient(0deg, rgba(37,158,241,0.58) 33%, rgba(74,37,241,1) 100%);
-}
-
-.modal-inside{
-    background-color: var(--primary-color);
-    height: 60%;
-    margin: 10% auto;
-    padding: 10px 40px 20px 40px;
-    width: 80%;
-    min-height: fit-content;
-    box-shadow: 0 0px 10px  rgba(66, 51, 51, 0.5);
-    display: grid;
-    grid-template-rows: 1fr 5fr;
-    animation-name: modalOpen;
-    animation-duration: 1.5s; 
-}
-
-.btnCloseModal{
-    color: #fff;
-    font-size: 50px;
-    margin-left: auto;
-}
-
-.modal-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-.modal-content input{
-    outline: none;
-    border: none;
-    background-color: white;
-    height: 50px;
-    width: 40%;
-    min-width: 250px;
-    align-self: center;
-    padding-left: 20px;
-    font-size: 16px;
-    color: var(--lightblue-color);
-    font-weight: bold;
-}
-
-.modal-content label{
-    font-size: 16px;
-    font-weight: normal;
-    letter-spacing: 1px;
-    line-height: 18px;
-    color: white;
-}
-
-.btnCloseModal:hover, .btnCloseModal:focus{
-    cursor: pointer;
-    color: black;
 }
 
 /* Comments Page */
@@ -867,18 +799,24 @@ footer {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .listpage .func-list-page > input{
+    .func-list-page > input{
         width: 100%;
         margin-bottom: 1.5rem;
     }
 
-    .listpage .func-list-page .radio-group{
+    .func-list-page .radio-group{
         width: 100%;
     }
 
-    .listpage .func-list-page .radio-group button{
+    .func-list-page .radio-group button{
         width: 75%;
         margin-left: auto;
+    }
+
+    .crud-modal .modal-inside .modal-content > div{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 35px;
     }
 }
 

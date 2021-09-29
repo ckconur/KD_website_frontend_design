@@ -29,10 +29,17 @@ function closeModal(modalId) {
 
 function outsideClick(ev) {
     let modal = document.getElementsByClassName('modal')[0];
+    let crudModal = document.getElementsByClassName('crud-modal')[0];
     if (modal !== undefined) {
         let modalId = modal.id;
         if (ev.target.id == modalId) {
             modal.style.display = 'none';
+        }
+    }
+    if (crudModal !== undefined) {
+        let modalId = crudModal.id;
+        if (ev.target.id == modalId) {
+            crudModal.style.display = 'none';
         }
     }
 }

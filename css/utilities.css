@@ -95,6 +95,10 @@
     display: flex;
 }
 
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
 .flex-column{
     flex-direction: column;
 }
@@ -472,6 +476,7 @@
     height: inherit;
     border-radius: 5px;
     transition: all 250ms ease-in-out;
+    cursor: pointer;
 }
 
 .square-input-label-solid > img{
@@ -503,6 +508,7 @@
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    table-layout: fixed;
 
   }
   
@@ -516,6 +522,7 @@
 .table th,
 .table td {
     padding: 12px 15px;
+    word-wrap: break-word;
 }
   
 .table tbody tr {
@@ -561,7 +568,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* max-width: 250px; */
     min-height: 250px;
     transition: all 250ms ease-in-out;
 }
@@ -665,3 +671,112 @@
 .fw-bolder{
     font-weight: bolder;
 }
+
+/* Crud Modal */
+
+.crud-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.crud-modal .modal-inside{
+    background-color: #f2f2f2;
+    width: fit-content;
+    height: fit-content;
+    margin: 5% auto;
+    padding: 20px 40px 20px 40px;
+}
+
+.crud-modal .modal-inside > div:first-of-type{
+    border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+    height: fit-content;
+}
+
+.crud-modal .modal-content{
+    width: min-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.crud-modal .modal-content textarea{
+    height: auto;
+    width: auto;
+}
+
+
+/* Forget Password Modal */
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: rgb(37,158,241);
+    background: linear-gradient(0deg, rgba(37,158,241,0.58) 33%, rgba(74,37,241,1) 100%);
+}
+
+.modal-inside{
+    background-color: var(--primary-color);
+    height: 60%;
+    margin: 10% auto;
+    padding: 10px 40px 20px 40px;
+    width: 80%;
+    min-height: fit-content;
+    box-shadow: 0 0px 10px  rgba(66, 51, 51, 0.5);
+    animation-name: modalOpen;
+    animation-duration: 1.5s; 
+    display: grid;
+    
+}
+
+.btnCloseModal{
+    color: rgb(233, 22, 145);
+    font-size: 50px;
+    margin-left: auto;
+}
+
+.modal .modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.modal .modal-content input{
+    outline: none;
+    border: none;
+    background-color: white;
+    height: 50px;
+    width: 40%;
+    min-width: 250px;
+    align-self: center;
+    padding-left: 20px;
+    font-size: 16px;
+    color: var(--lightblue-color);
+    font-weight: bold;
+}
+
+.modal .modal-content label{
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 18px;
+    color: white;
+}
+
+.btnCloseModal:hover, .btnCloseModal:focus{
+    cursor: pointer;
+    color: black;
+}
+
