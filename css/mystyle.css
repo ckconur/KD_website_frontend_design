@@ -374,7 +374,7 @@ header img:hover{
 
 .side-bar ul li a{
     display: block;
-    padding: 20px 60px;
+    padding: 20px 40px;
     color: #fff;
     text-decoration: none;
 }
@@ -829,9 +829,19 @@ footer {
         padding-top: 0 !important;
         padding-bottom: 50px !important;
     }
-}
 
-@media screen and (max-width: 600px) {
+    .side-bar{
+        display: none;
+    }
+
+    .header .dropdown-task{
+        display: block;
+        transform: scale(1, 0);
+    }
+
+    .dropdown-toggle:checked ~ .dropdown-task {
+        transform: scale(1,1);
+    }
 
     .content .header{
         display: flex;
@@ -862,19 +872,12 @@ footer {
         padding-left: 25px;
         padding-right: 25px;
     }
+}
 
-    .side-bar{
-        display: none;
-    }
+@media screen and (max-width: 600px) {
 
-    .header .dropdown-task{
-        display: block;
-        transform: scale(1, 0);
-    }
+   
 
-    .dropdown-toggle:checked ~ .dropdown-task {
-        transform: scale(1,1);
-    }
 }
 
 

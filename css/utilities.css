@@ -40,6 +40,12 @@
     background-color: var(--success-color);    
 }
 
+
+.btn-warning{
+    color: white;
+    background-color: var(--warning-color);    
+}
+
 .btn-outline-white{
     background-color: transparent;
     border: 1px solid white;
@@ -145,6 +151,10 @@
 
 .as-center{
     align-self: center;
+}
+
+.as-end{
+    align-self: flex-end;
 }
 
 /* Float */
@@ -699,9 +709,8 @@
 }
 
 .crud-modal .modal-content{
-    width: min-content;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .crud-modal .modal-content textarea{
