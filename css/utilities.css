@@ -440,11 +440,14 @@
     color: black;
 }
 
-.form-control:focus~label{
+.form-control:focus~label,
+.form-control:not(:placeholder-shown)~label{
     color: var(--primary-color);
     background-color: white;
     transform: translateY(-150%);
 }
+
+
 
 .square-input{
     height: 30px;

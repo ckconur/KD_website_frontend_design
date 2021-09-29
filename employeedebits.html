@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Debits</title>
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="employee-detail-page d-flex">
+
+        <!-- Side Bar -->
+
+        <div>
+            <div class="side-bar">
+                <div>
+                    <img src="/images/kd_logo_white.png" alt="">
+                    <h2 class="as-center">KD-34</h2>
+
+                </div>
+                <hr>
+                <ul>
+                    <li><a href="companymanager.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                    <li><a href="listpage.html"><i class="fas fa-users "></i>Çalışanlar</a></li>
+                    <li><a href="#"><i class="fas fa-plane "></i>İzinler</a></li>
+                    <li><a href="#"><i class="fas fa-flag "></i>Raporlar</a></li>
+                    <li><a href="#"><i class="fas fa-calendar "></i>Takvim</a></li>
+                    <li><a href="usersettings.html"><i class="fas fa-cogs "></i>Ayarlar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+
+            <!-- Header -->
+
+            <div class="header">
+                <h3>Onur Çekiç</h3>
+
+                <input type="checkbox" name="" id="dropdown-toggle" class="dropdown-toggle">
+                <div class="dropdown-task">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-plus-circle"></i>Talep</a></li>
+                        <li><a href="companymanager.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                        <li><a href="listpage.html"><i class="fas fa-users "></i>Çalışanlar</a></li>
+                        <li><a href="#"><i class="fas fa-plane "></i>İzinler</a></li>
+                        <li><a href="#"><i class="fas fa-flag "></i>Raporlar</a></li>
+                        <li><a href="#"><i class="fas fa-calendar "></i>Takvim</a></li>
+                        <li><a href="usersettings.html"><i class="fas fa-cogs "></i>Ayarlar</a></li>
+                    </ul>
+                </div>
+                <label for="dropdown-toggle" class="dropdown-toggle-label">
+                    <span><i class="fas fa-plus fa-2x as-center"></i></span>
+                </label>
+            </div>
+
+            <div class="tabs">
+                <a href="employeeeditpanel.html">Genel</a>
+                <a href="employeerequests.html">Talepler</a>
+                <a href="employeedebits.html">Zimmetler</a>
+                <a href="employeebonuses.html">Primler</a>
+                <a href="employeefiles.html">Dosyalar</a>
+            </div>
+            <hr>
+
+            <!-- Content Body -->
+
+            <div class="py-4">
+                <div class="func-list-page mb-2">
+                    <!-- Search Bar -->
+                    <input type="text" class="square-input square-input-md" placeholder="Arama">
+
+                    <div class="d-flex radio-group">
+                        <button class="btn btn-primary ml-2" onclick="openModal('debitModal')">Zimmet Ekle</button>
+                    </div>
+                </div>
+
+                <div>
+                    <table class="table table-striped width-100">
+                        <thead>
+                            <tr>
+                                <th>Kategori</th>
+                                <th>Seri Numarası</th>
+                                <th>Veriliş Tarihi</th>
+                                <th>İade Tarihi</th>
+                                <th>Açıklama</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Cep Telefonu</td>
+                                <td>546545645645</td>
+                                <td>28 Eylül 2021</td>
+                                <td>5 Ekim 2021</td>
+                                <td>-------------</td>
+                                <td>
+                                    <button class="btn btn-danger mx-auto">Sil</button>
+                                    <br>
+                                    <button class="btn btn-warning mx-auto" onclick="openModal('debitModal')">Güncelle</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Bilgisayar</td>
+                                <td>21321333213</td>
+                                <td>28 Eylül 2021</td>
+                                <td>5 Ekim 2021</td>
+                                <td>Ekstra bellek gerekli</td>
+                                <td>
+                                    <button class="btn btn-danger mx-auto">Sil</button>
+                                    <br>
+                                    <button class="btn btn-warning mx-auto" onclick="openModal('debitModal')">Güncelle</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+    </section>
+
+    <div class="crud-modal" id="debitModal">
+        <div class="modal-inside">
+            <div class="d-flex jc-between ai-center mb-3">
+                <h4>Zimmet Ekle</h4>
+                <span class="btnCloseModal" onclick="closeModal('debitModal')">&times;</span>
+            </div>
+
+            <div class="modal-content">
+                <!-- Put What u Want -->
+                <div class="my-3 d-flex">
+                    <div class="mr-1">
+                        <label for="category" class="square-input-label">Kategori</label>
+                        <select name="category" id="category" class="square-input">
+                            <option value="">Bence</option>
+                            <option value="">Bu</option>
+                            <option value="">Bizim</option>
+                            <option value="">Yok</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="serialnumber" class="square-input-label">Seri Numarası</label>
+                        <input type="text" class="square-input" id="serialnumber">
+                    </div>
+                </div>
+
+                <div class="my-3 d-flex">
+                    <div class="mr-1">
+                        <label for="givenDate" class="square-input-label">Veriliş Tarihi</label>
+                        <input type="datetime-local" class="square-input" id="givenDate">
+                    </div>
+
+                    <div>
+                        <label for="returnDate" class="square-input-label">İade Tarihi</label>
+                        <input type="datetime-local" class="square-input" id="returnDate">
+                    </div>
+                </div>
+
+                <div class="mt-3 mb-1">
+                    <label for="description" class="square-input-label">Açıklama</label>
+                    <textarea name="description" id="description" cols="50" rows="10"
+                        class="square-input"></textarea>
+                </div>
+                <div class="my-1">
+                    <a href="#" class="btn btn-primary ml-auto">Kaydet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

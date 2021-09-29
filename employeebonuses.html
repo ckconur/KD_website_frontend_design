@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Employee Debits</title>
     <link rel="stylesheet" href="/css/utilities.css">
     <link rel="stylesheet" href="/css/mystyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -62,10 +62,10 @@
 
             <div class="tabs">
                 <a href="employeeeditpanel.html">Genel</a>
-                <a href="debits.html">Zimmetler</a>
-                <a href="bonuses.html">Primler</a>
-                <a href="requests.html">Talepler</a>
-                <a href="files.html">Dosyalar</a>
+                <a href="employeerequests.html">Talepler</a>
+                <a href="employeedebits.html">Zimmetler</a>
+                <a href="employeebonuses.html">Primler</a>
+                <a href="employeefiles.html">Dosyalar</a>
             </div>
             <hr>
 
@@ -77,7 +77,7 @@
                     <input type="text" class="square-input square-input-md" placeholder="Arama">
 
                     <div class="d-flex radio-group">
-                        <button class="btn btn-primary ml-2" onclick="openModal('debitModal')">Zimmet Ekle</button>
+                        <button class="btn btn-primary ml-2" onclick="openModal('bonusModal')">Prim Ekle</button>
                     </div>
                 </div>
 
@@ -85,41 +85,24 @@
                     <table class="table table-striped width-100">
                         <thead>
                             <tr>
-                                <th>Kategori</th>
-                                <th>Seri Numarası</th>
-                                <th>Veriliş Tarihi</th>
-                                <th>İade Tarihi</th>
                                 <th>Açıklama</th>
+                                <th>Veriliş Tarihi</th>
+                                <th>Miktar</th>
                                 <th></th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
-                                <td>Cep Telefonu</td>
-                                <td>546545645645</td>
-                                <td>28 Eylül 2021</td>
-                                <td>5 Ekim 2021</td>
-                                <td>-------------</td>
+                                <td>Şirket görüşmeleri için cep telefonu aldı.</td>
+                                <td>29 Eylül 2021</td>
+                                <td>3149,90 ₺</td>
                                 <td>
                                     <button class="btn btn-danger mx-auto">Sil</button>
                                     <br>
-                                    <button class="btn btn-warning mx-auto" onclick="openModal('debitModal')">Güncelle</button>
+                                    <button class="btn btn-warning mx-auto" onclick="openModal('bonusModal')">Güncelle</button>
                                 </td>
-                            </tr>
-
-                            <tr>
-                                <td>Bilgisayar</td>
-                                <td>21321333213</td>
-                                <td>28 Eylül 2021</td>
-                                <td>5 Ekim 2021</td>
-                                <td>Ekstra bellek gerekli</td>
-                                <td>
-                                    <button class="btn btn-danger mx-auto">Sil</button>
-                                    <br>
-                                    <button class="btn btn-warning mx-auto" onclick="openModal('debitModal')">Güncelle</button>
-                                </td>
-                            </tr>
+                            </tr>                       
                         </tbody>
                     </table>
                 </div>
@@ -127,41 +110,24 @@
             </div>
     </section>
 
-    <div class="crud-modal" id="debitModal">
+    <div class="crud-modal" id="bonusModal">
         <div class="modal-inside">
             <div class="d-flex jc-between ai-center mb-3">
                 <h4>Zimmet Ekle</h4>
-                <span class="btnCloseModal" onclick="closeModal('debitModal')">&times;</span>
+                <span class="btnCloseModal" onclick="closeModal('bonusModal')">&times;</span>
             </div>
 
             <div class="modal-content">
                 <!-- Put What u Want -->
                 <div class="my-3 d-flex">
                     <div class="mr-1">
-                        <label for="category" class="square-input-label">Kategori</label>
-                        <select name="category" id="category" class="square-input">
-                            <option value="">Bence</option>
-                            <option value="">Bu</option>
-                            <option value="">Bizim</option>
-                            <option value="">Yok</option>
-                        </select>
+                        <label for="amountOfBonus" class="square-input-label">Prim Miktarı</label>
+                        <input type="number" class="square-input" id="amountOfBonus">
                     </div>
 
                     <div>
-                        <label for="serialnumber" class="square-input-label">Seri Numarası</label>
-                        <input type="text" class="square-input" id="serialnumber">
-                    </div>
-                </div>
-
-                <div class="my-3 d-flex">
-                    <div class="mr-1">
                         <label for="givenDate" class="square-input-label">Veriliş Tarihi</label>
                         <input type="datetime-local" class="square-input" id="givenDate">
-                    </div>
-
-                    <div>
-                        <label for="returnDate" class="square-input-label">İade Tarihi</label>
-                        <input type="datetime-local" class="square-input" id="returnDate">
                     </div>
                 </div>
 
