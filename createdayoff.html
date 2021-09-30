@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Requests</title>
+    <title>Day Off</title>
     <link rel="stylesheet" href="/css/utilities.css">
     <link rel="stylesheet" href="/css/mystyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -41,7 +41,7 @@
             <!-- Header -->
 
             <div class="header">
-                <h3>Onur Çekiç</h3>
+                <h3>İzinler Paneli</h3>
 
                 <input type="checkbox" name="" id="dropdown-toggle" class="dropdown-toggle">
                 <div class="dropdown-task">
@@ -60,73 +60,65 @@
                 </label>
             </div>
 
+            <!-- Tabs -->
+
             <div class="tabs">
-                <a href="employeeeditpanel.html">Genel</a>
-                <a href="employeerequests.html">Talepler</a>
-                <a href="employeedebits.html">Zimmetler</a>
-                <a href="employeebonuses.html">Primler</a>
-                <a href="employeefiles.html">Dosyalar</a>
+                <a href="dayoffs.html">Genel</a>
+                <a href="createdayoff.html">İzin Oluştur</a>
             </div>
+
             <hr>
 
             <!-- Content Body -->
 
             <div class="py-4">
-                <div class="func-list-page mb-2">
-                    <!-- Search Bar -->
-                    <input type="text" class="square-input square-input-md" placeholder="Arama">
-                </div>
 
-                <div>
-                    <table class="table table-striped width-100">
-                        <thead>
-                            <tr>
-                                <th>Kategori</th>
-                                <th>İhtiyaç</th>
-                                <th>Talep Tarihi</th>
-                                <th>Açıklama</th>
-                                <th> </th>
-                            </tr>
-                        </thead>
+                <div class="d-flex flex-wrap jc-center">
+                    <div>
+                        <div class="d-flex flex-column my-4">
+                            <input type="text" placeholder="İzin Adı" required class="square-input square-input-md" id="dayofftype">
+                            <label for="dayofftype" class="square-input-label">İzin Türü</label>
+                        </div>
+                        <div class="d-flex flex-column my-4">
+                            <input type="text" placeholder="Açıklama" required class="square-input square-input-md" id="dayoffdescription">
+                            <label for="dayoffdescription" class="square-input-label">Açıklama</label>
+                        </div>
+        
+                        <div class="d-flex flex-column my-4">
+                            <input type="number" placeholder="Gün" required class="square-input square-input-md" id="dayoffday">
+                            <label for="dayoffday" class="square-input-label">Gün</label>
+                        </div>
 
-                        <tbody>
-                            <tr>
-                                <td>Zimmet</td>
-                                <td>Bilgisayar</td>
-                                <td>28 Eylül 2021</td>
-                                <td>Ekstra bellek gerekli</td>
-                                <td>
-                                    <button class="btn btn-danger mx-auto" onclick="openModal('approveModal')">Reddet</button>
-                                    <br>
-                                    <button class="btn btn-success mx-auto">Onayla</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <div class="d-grid mb-4">
+                            <button class="btn btn-primary">Oluştur</button>
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <table class="table table-striped width-100">
+                            <thead>
+                                <tr>
+                                    <th>İzin Türü</th>
+                                    <th>Açıklama</th>
+                                    <th>Gün</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+    
+                            <tbody>
+                                <tr>
+                                    <td>Yıllık İzin</td>
+                                    <td>Çalışanların 1 seneden sonra edineceği izin</td>
+                                    <td>60</td>
+                                    <td><a href="#" class="btn btn-danger">Kaldır</a></td>
+                                </tr>
+                                </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
     </section>
-
-    <div class="crud-modal" id="approveModal">
-        <div class="modal-inside">
-            <div class="d-flex jc-between ai-center mb-3">
-                <h4>Zimmet Ekle</h4>
-                <span class="btnCloseModal" onclick="closeModal('approveModal')">&times;</span>
-            </div>
-
-            <div class="modal-content">
-                <!-- Put What u Want -->
-                <div class="mt-3 mb-1">
-                    <label for="description" class="square-input-label">Açıklama</label>
-                    <textarea name="description" id="description" cols="50" rows="10"
-                        class="square-input"></textarea>
-                </div>
-                <div class="my-1">
-                    <a href="#" class="btn btn-danger ml-auto">Reddet</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="/js/app.js"></script>
 </body>
