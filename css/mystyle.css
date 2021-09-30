@@ -555,6 +555,19 @@ header img:hover{
     color: rgba(53, 53, 53, 0.603);
     padding-bottom: 10px;
     margin-right: 1.25rem;
+    position: relative;
+}
+
+.tabs a::after{
+    content: " ";
+    bottom: 5px;
+    left: -5%;
+    width: 110%;
+    border: 1px solid var(--primary-color-half);
+    position: absolute;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in;
+    transform-origin: center;
 }
 
 .tabs a:active{
@@ -562,7 +575,7 @@ header img:hover{
 }
 
 .tabs a:hover{
-    color: black;
+    color: black;    
 }
 
 .employee-detail-section{
