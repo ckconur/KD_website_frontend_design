@@ -60,6 +60,12 @@
     transform: scale(1.05);
 }
 
+.btn-xs{
+    font-size: 12px;
+    font-weight: normal;
+    padding: 5px 10px;
+}
+
 .btn-md{
     font-size: 18px;
     font-weight: bold;
@@ -279,6 +285,10 @@
 
 .ml-2{
     margin-left: 1.5rem;
+}
+
+.m-second :nth-child(2){
+    margin-left: 25px;
 }
 
 /* Paddings */
@@ -685,6 +695,25 @@
     font-weight: bolder;
 }
 
+.fs-xs{
+    font-size: 12px;
+}
+
+.fs-s{
+    font-size: 14px;
+}
+
+.fs-m{
+    font-size: 16px;
+}
+
+.fs-l{
+    font-size: 18px;
+}
+
+.fs-xl{
+    font-size: 22px;
+}
 /* Crud Modal */
 
 .crud-modal{

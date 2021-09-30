@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Off</title>
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="employee-detail-page d-flex">
+
+        <!-- Side Bar -->
+
+        <div>
+            <div class="side-bar">
+                <div>
+                    <img src="/images/kd_logo_white.png" alt="">
+                    <h2 class="as-center">KD-34</h2>
+
+                </div>
+                <hr>
+                <ul>
+                    <li><a href="companymanager.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                    <li><a href="listpage.html"><i class="fas fa-users "></i>Çalışanlar</a></li>
+                    <li><a href="#"><i class="fas fa-plane "></i>İzinler</a></li>
+                    <li><a href="#"><i class="fas fa-flag "></i>Raporlar</a></li>
+                    <li><a href="#"><i class="fas fa-calendar "></i>Takvim</a></li>
+                    <li><a href="usersettings.html"><i class="fas fa-cogs "></i>Ayarlar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+
+            <!-- Header -->
+
+            <div class="header">
+                <h3>İzinler Paneli</h3>
+
+                <input type="checkbox" name="" id="dropdown-toggle" class="dropdown-toggle">
+                <div class="dropdown-task">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-plus-circle"></i>Talep</a></li>
+                        <li><a href="companymanager.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                        <li><a href="listpage.html"><i class="fas fa-users "></i>Çalışanlar</a></li>
+                        <li><a href="#"><i class="fas fa-plane "></i>İzinler</a></li>
+                        <li><a href="#"><i class="fas fa-flag "></i>Raporlar</a></li>
+                        <li><a href="#"><i class="fas fa-calendar "></i>Takvim</a></li>
+                        <li><a href="usersettings.html"><i class="fas fa-cogs "></i>Ayarlar</a></li>
+                    </ul>
+                </div>
+                <label for="dropdown-toggle" class="dropdown-toggle-label">
+                    <span><i class="fas fa-plus fa-2x as-center"></i></span>
+                </label>
+            </div>
+
+            <hr>
+
+            <!-- Content Body -->
+
+            <div class="py-4">
+                <div class="func-list-page mb-2">
+                    <div class="d-flex radio-group">
+                        <input type="radio" value="1" name="approveType" id="upcomings" class="d-none square-input" checked onchange="changeDayoffList(1)"> 
+                        <label for="upcomings" class="square-input-label-solid">
+                            Yaklaşanlar (2)
+                        </label>
+                        <input type="radio" name="approveType" id="waitingApprove" class="d-none square-input" onchange="changeDayoffList(2)">
+                        <label for="waitingApprove" class="square-input-label-solid">
+                            Onay Bekleyen (3)
+                        </label>
+                        <input type="radio" value="3" name="approveType" id="approved" class="d-none square-input" onchange="changeDayoffList(3)">
+                        <label for="approved" class="square-input-label-solid">
+                            Onaylananlar (4)
+                        </label>
+                        <input type="radio" value="4" name="approveType" id="rejected" class="d-none square-input" onchange="changeDayoffList(4)">
+                        <label for="rejected" class="square-input-label-solid">
+                            Reddedilenler (0)
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <table class="table table-striped width-100">
+                        <thead>
+                            <tr>
+                                <th>Ad Soyad</th>
+                                <th>Tür</th>
+                                <th>Gün</th>
+                                <th>Başlangıç Tarihi</th>
+                                <th>Bitiş Tarihi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr onclick="openModal('dayoffModal')">
+                                <td>Onur Çekiç</td>
+                                <td>Yıllık İzin</td>
+                                <td>8</td>
+                                <td>28 Eylül 2021</td>
+                                <td>5 Ekim 2021</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+    </section>
+
+
+    <!-- Modal -->
+
+    <div class="crud-modal" id="dayoffModal">
+        <div class="modal-inside">
+            <div class="d-flex jc-between ai-center mb-3">
+                <h4>İzin Talep</h4>
+                <span class="btnCloseModal" onclick="closeModal('dayoffModal')">&times;</span>
+            </div>
+
+            <div class="modal-content">
+                <!-- Put What u Want -->
+                <div>
+                   <div>
+                    <div class="my-3 d-flex jc-between fs-xs m-second">
+                        <span>Durum</span>
+                        <span class="btn btn-success btn-xs">Onaylandı</span>
+                    </div>
+                    <hr>
+    
+                    <div class="my-3 d-flex jc-between fs-xs m-second">
+                        <span>İzin Türü</span>
+                        <span>Yıllık İzin</span>
+                    </div>
+                    <hr>
+    
+                    <div class="my-3 d-flex jc-between fs-xs m-second">
+                        <span>Toplam izin</span>
+                        <span>8</span>
+                    </div>
+                    <hr>
+    
+                    <div class="my-3 d-flex jc-between fs-xs m-second">
+                        <span>İzin Başlangıç</span>
+                        <span class="">28 Eylül 2021</span>
+                    </div>
+                    <hr>
+    
+                    <div class="my-3 d-flex jc-between fs-xs m-second">
+                        <span>İzin Bitiş</span>
+                        <span>5 Ekim 2021</span>
+                    </div>
+                    <hr>
+    
+                    <div class="my-3 d-flex jc-between fs-xs m-second">
+                        <span>Mesai Başangıç</span>
+                        <span>6 Ekim 2021 09:00</span>
+                    </div>
+                    <hr>
+    
+                    <div class="my-3 d-flex jc-between fs-xs m-second">
+                        <span>Oluşturulma Tarihi</span>
+                        <span>25 Eylül 2021 14:41</span>
+                    </div>
+                    <hr>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

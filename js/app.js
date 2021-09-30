@@ -87,7 +87,7 @@ function makeChart() {
             }]
         },
         options: {
-            plugins:{
+            plugins: {
                 legend: {
                     display: false,
                     position: 'top',
@@ -127,11 +127,36 @@ function changeListType(ev) {
         cardsSection.style.display = 'none';
     }
 
-    else{        
+    else {
         tableSection.style.display = 'none';
         cardsSection.style.display = 'block';
     }
 };
+
+function changeDayoffList(value) {
+    let body = document.getElementsByTagName('body')[0];
+    switch (value) {
+        case 1:
+            body.style.backgroundColor = 'red';
+
+            break;
+
+        case 2:
+            body.style.backgroundColor = 'green';
+
+            break;
+
+        case 3:
+            body.style.backgroundColor = 'black';
+
+            break;
+
+        case 4:
+            body.style.backgroundColor = 'tomato';
+
+            break;
+    }
+}
 
 
 
