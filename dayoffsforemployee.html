@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Off History</title>
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="details-page d-flex">
+
+        <!-- Side Bar -->
+
+        <div>
+            <div class="side-bar">
+                <div>
+                    <img src="/images/kd_logo_white.png" alt="">
+                    <h2 class="as-center">KD-34</h2>
+
+                </div>
+                <hr>
+                <ul>
+                    <li><a href="employee.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                    <li><a href="listpageforemployee.html"><i class="fas fa-users "></i>Çalışanlar</a></li>
+                    <li><a href="dayoffsforemployee.html"><i class="fas fa-plane "></i>İzinlerim</a></li>
+                    <li><a href="debitsforemployee.html"><i class="fas fa-plane "></i>Zimmetlerim</a></li>
+                    <li><a href="expansesforemployee.html"><i class="fas fa-plane "></i>Harcamalarım</a></li>
+                    <li><a href="#"><i class="fas fa-calendar "></i>Takvim</a></li>
+                    <li><a href="usersettings.html"><i class="fas fa-cogs "></i>Ayarlar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+
+            <!-- Header -->
+
+            <div class="header">
+                <h3>Onur Çekiç</h3>
+
+                <input type="checkbox" name="" id="dropdown-toggle" class="dropdown-toggle">
+                <div class="dropdown-task">
+                    <ul>
+                        <li><a href="employee.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                        <li><a href="listpageforemployee.html"><i class="fas fa-users "></i>Çalışanlar</a></li>
+                        <li><a href="dayoffsforemployee.html"><i class="fas fa-plane "></i>İzinlerim</a></li>
+                        <li><a href="debitsforemployee.html"><i class="fas fa-plane "></i>Zimmetlerim</a></li>
+                        <li><a href="expansesforemployee.html"><i class="fas fa-plane "></i>Harcamalarım</a></li>
+                        <li><a href="#"><i class="fas fa-calendar "></i>Takvim</a></li>
+                        <li><a href="usersettings.html"><i class="fas fa-cogs "></i>Ayarlar</a></li>
+                    </ul>
+                </div>
+                <label for="dropdown-toggle" class="dropdown-toggle-label">
+                    <span><i class="fas fa-plus fa-2x as-center"></i></span>
+                </label>
+            </div>
+            <hr>
+
+            <!-- Content Body -->
+
+            <div class="py-4">
+                <div class="func-list-page mb-2">
+                    <div>
+                        <div class="d-flex jc-between fs-xs">
+                            <span>Kalan</span>
+                            <span class="mx-4">Kullanılan</span>
+                        </div>
+
+                        <div class="d-flex jc-between fs-xl fw-bold">
+                            <span class="clr-primary">0.00 gün</span>
+                            <span class="clr-fade-black mx-4">0 gün</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <table class="table table-striped width-100">
+                        <thead>
+                            <tr>
+                                <th>Başlangıç</th>
+                                <th>Bitiş</th>
+                                <th>Mesai Başlangıç</th>
+                                <th>Süre</th>
+                                <th>İzin Türü</th>
+                                <th>Açıklama</th>
+                                <th>Durum</th>
+                                <th>Red Nedeni</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>29 Eylül 2021</td>
+                                <td>29 Eylül 2021</td>
+                                <td>29 Eylül 2021 09:00</td>
+                                <td>5 gün</td>
+                                <td>Mazaret İzni</td>
+                                <td>Diş hekimi randevusu</td>
+                                <td class="warning">Onay Bekliyor</td>
+                                <td><a class="pretty-link" href="#" onclick="openModal('rejectReasonModal')">Detay</a>
+                                </td>
+
+                                <td>
+                                    <button class="btn btn-danger btn-xs mx-auto">İptal et</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+    </section>
+
+    <div class="crud-modal" id="rejectReasonModal">
+        <div class="modal-inside">
+            <div class="d-flex jc-between ai-center mb-3">
+                <h4>Reddedilme Nedeni</h4>
+                <span class="btnCloseModal" onclick="closeModal('rejectReasonModal')">&times;</span>
+            </div>
+
+            <div class="modal-content">
+                <!-- Put What u Want -->
+                <div class="my-3 d-flex">
+
+                    <div>
+                        <label for="description" class="square-input-label">Açıklama</label>
+                        <textarea name="description" id="description" cols="50" rows="10"
+                            class="square-input" readonly></textarea>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/app.js"></script>
+</body>
+
+</html>

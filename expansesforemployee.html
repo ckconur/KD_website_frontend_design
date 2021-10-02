@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanses of Employee</title>
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="details-page d-flex">
+
+        <!-- Side Bar -->
+
+        <div>
+            <div class="side-bar">
+                <div>
+                    <img src="/images/kd_logo_white.png" alt="">
+                    <h2 class="as-center">KD-34</h2>
+
+                </div>
+                <hr>
+                <ul>
+                    <li><a href="employee.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                    <li><a href="listpageforemployee.html"><i class="fas fa-users "></i>Çalışanlar</a></li>
+                    <li><a href="dayoffsforemployee.html"><i class="fas fa-plane "></i>İzinlerim</a></li>
+                    <li><a href="debitsforemployee.html"><i class="fas fa-plane "></i>Zimmetlerim</a></li>
+                    <li><a href="expansesforemployee.html"><i class="fas fa-plane "></i>Harcamalarım</a></li>
+                    <li><a href="#"><i class="fas fa-calendar "></i>Takvim</a></li>
+                    <li><a href="usersettings.html"><i class="fas fa-cogs "></i>Ayarlar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+
+            <!-- Header -->
+
+            <div class="header">
+                <h3>Onur Çekiç</h3>
+
+                <input type="checkbox" name="" id="dropdown-toggle" class="dropdown-toggle">
+                <div class="dropdown-task">
+                    <ul>
+                        <li><a href="employee.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                        <li><a href="listpageforemployee.html"><i class="fas fa-users "></i>Çalışanlar</a></li>
+                        <li><a href="dayoffsforemployee.html"><i class="fas fa-plane "></i>İzinlerim</a></li>
+                        <li><a href="debitsforemployee.html"><i class="fas fa-plane "></i>Zimmetlerim</a></li>
+                        <li><a href="expansesforemployee.html"><i class="fas fa-plane "></i>Harcamalarım</a></li>
+                        <li><a href="#"><i class="fas fa-calendar "></i>Takvim</a></li>
+                        <li><a href="usersettings.html"><i class="fas fa-cogs "></i>Ayarlar</a></li>
+                    </ul>
+                </div>
+                <label for="dropdown-toggle" class="dropdown-toggle-label">
+                    <span><i class="fas fa-plus fa-2x as-center"></i></span>
+                </label>
+            </div>
+            <hr>
+
+            <!-- Content Body -->
+
+            <div class="py-4">
+                <div class="func-list-page mb-2">
+
+                    <!-- Search Bar -->
+                    <input type="text" class="square-input square-input-md" placeholder="Arama">
+
+                    <!-- Create Button -->
+                    <button class="btn btn-primary btn-sq" onclick="openModal('createExpanseModal')">Harama
+                        Oluştur</button>
+                </div>
+
+                <div>
+                    <table class="table table-striped width-100">
+                        <thead>
+                            <tr>
+                                <th>Tarih</th>
+                                <th>Miktar</th>
+                                <th>Açıklama</th>
+                                <th>Dosyalar</th>
+                                <th>Durum</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>29 Eylül 2021</td>
+                                <td>314,44 ₺</td>
+                                <td>İş yemeği</td>
+                                <td><a href="#" class="pretty-link" onclick="openModal('expanseDetailModal')">Detaylar</a></td>
+                                <td class="warning">Onay Bekliyor</td>
+                            </tr>
+
+                            <tr>
+                                <td>29 Eylül 2021</td>
+                                <td>314,44 ₺</td>
+                                <td>İş yemeği</td>
+                                <td><a href="#" class="pretty-link">Detaylar</a></td>
+                                <td class="success">Onaylandı</td>
+                            </tr>
+
+                            <tr>
+                                <td>29 Eylül 2021</td>
+                                <td>314,44 ₺</td>
+                                <td>İş yemeği</td>
+                                <td><a href="#" class="pretty-link">Detaylar</a></td>
+                                <td class="danger">Reddedildi</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- Modal -->
+
+    <!-- Create Modal -->
+
+    <div class="crud-modal" id="createExpanseModal">
+        <div class="modal-inside">
+            <div class="d-flex jc-between ai-center mb-3">
+                <h4>Reddedilme Nedeni</h4>
+                <span class="btnCloseModal" onclick="closeModal('createExpanseModal')">&times;</span>
+            </div>
+
+            <div class="modal-content">
+                <!-- Put What u Want -->
+                <div class="my-3 d-flex">
+                    <div class="mr-1">
+                        <label for="amountOfBonus" class="square-input-label">Prim Miktarı</label>
+                        <input type="number" class="square-input" id="amountOfBonus">
+                    </div>
+
+                    <div>
+                        <label for="givenDate" class="square-input-label">Veriliş Tarihi</label>
+                        <input type="datetime-local" class="square-input" id="givenDate">
+                    </div>
+                </div>
+
+                <div class="my-3 d-grid">
+                    <div class="mr-1">
+                        <label for="amountOfBonus" class="square-input-label">Harcamaya İlişkin Dosyalar</label>
+                        <input type="file" class="square-input" id="amountOfBonus" multiple>
+                    </div>
+                </div>
+
+                <div class="mt-3 mb-1">
+                    <label for="description" class="square-input-label">Açıklama</label>
+                    <textarea name="description" id="description" cols="50" rows="10" class="square-input"></textarea>
+                </div>
+
+                <div class="my-1">
+                    <a href="#" class="btn btn-primary btn-sq">Kaydet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expanse Detail Modal -->
+
+    <div class="crud-modal" id="expanseDetailModal">
+        <div class="modal-inside">
+            <div class="d-flex jc-between ai-center mb-3">
+                <h4>Reddedilme Nedeni</h4>
+                <span class="btnCloseModal" onclick="closeModal('expanseDetailModal')">&times;</span>
+            </div>
+
+            <div class="modal-content">
+                <!-- Put What u Want -->
+                <div class="mb-3 d-grid">
+                    <span>Tutar: </span>
+                    <span>Tarih: </span>
+
+                    <ul>
+                        <li><a href="#" class="pretty-link">Yemek fişi</a></li>
+                        <li><a href="#" class="pretty-link">Yemek fişi</a></li>
+                        <li><a href="#" class="pretty-link">Yemek fişi</a></li>
+                    </ul>
+                </div>
+
+                <div class="mt-3 mb-1">
+                    <label for="description" class="square-input-label">Açıklama</label>
+                    <textarea name="description" id="description" cols="50" rows="10" class="square-input" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="/js/app.js"></script>
+</body>
+
+</html>
