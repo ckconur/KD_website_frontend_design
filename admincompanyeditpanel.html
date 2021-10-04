@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Edit Panel</title>
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="details-page d-flex">
+
+        <!-- Side Bar -->
+
+        <div>
+            <div class="side-bar">
+                <div>
+                    <img src="/images/kd_logo_white.png" alt="">
+                    <h2 class="as-center">KD-34</h2>
+
+                </div>
+                <hr>
+                <ul>
+                    <li><a href="admin.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                    <li><a href="adminmembers.html"><i class="fas fa-users "></i>Şirketler</a></li>
+                    <li><a href="admindescribing.html"><i class="fas fa-plane "></i>Tanımlamalar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+
+            <!-- Header -->
+
+            <div class="header">
+                <h3>Admin</h3>
+
+                <input type="checkbox" name="" id="dropdown-toggle" class="dropdown-toggle">
+                <div class="dropdown-task">
+                    <ul>
+                        <li><a href="admin.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                        <li><a href="adminmembers.html"><i class="fas fa-users "></i>Şirketler</a></li>
+                        <li><a href="admindescribing.html"><i class="fas fa-plane "></i>Tanımlamalar</a></li>
+                    </ul>
+                </div>
+                <label for="dropdown-toggle" class="dropdown-toggle-label">
+                    <span><i class="fas fa-plus fa-2x as-center"></i></span>
+                </label>
+            </div>
+            <hr>
+
+            <!-- Content Body -->
+
+            <div class="py-4">
+                <div class="employee-detail-section">
+                    <div class="c-card width-100">
+
+                        <div class="c-card-header">
+                            <img src="/images/profile-user.png" alt="">
+                            <span>Şirket Adı: Osmanlı Nargile</span>
+                            <span>Yönetici Adı: Osman Tuğra</span>
+                            <select class="square-input">
+                                <option value="1">Aylık Üyelik</option>
+                                <option value="2">Yıllık Üyelik</option>
+                            </select>
+                            <span><a href="" class="btn btn-success">Aktifleştir</a></span>
+                        </div>
+
+                        <div class="c-card-body width-100">
+                            <div class="d-flex jc-between mb-3 mt-3">
+                                <span>Abonelik Başlama</span>
+                                <span>-----</span>
+                            </div>
+                            <div class="d-flex jc-between mb-3">
+                                <span>Abonelik Kalan Süre</span>
+                                <span>-----</span>
+                            </div>
+                            <div class="d-flex jc-between mb-3">
+                                <span>Abonelik Tipi</span>
+                                <span>-----</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card width-100">
+                        <div class="c-card-header">
+                            <span>Genel Bilgiler</span>
+                        </div>
+                        <div class="c-card-body width-100">
+                            <div class="my-3 d-flex flex-column">
+                                <input class="square-input square-input-md width-100 " type="text" id="firstName">
+                                <label class="square-input-label" for="firstName">Ad</label>
+                            </div>
+
+                            <div class="my-3 d-flex flex-column">
+                                <input class="square-input square-input-md width-100 " type="text" id="lastName">
+                                <label class="square-input-label" for="lastName">Soyad</label>
+                            </div>
+
+                            <div class="my-3 d-flex flex-column">
+                                <input class="square-input square-input-md width-100 " type="text" id="mail">
+                                <label class="square-input-label" for="mail">E-Posta</label>
+                            </div>
+
+                            <div class="my-3 d-flex flex-column">
+                                <input class="square-input square-input-md width-100 " type="text" id="Phone">
+                                <label class="square-input-label" for="Phone">Telefon</label>
+                            </div>
+
+                            <div class="my-3 d-flex flex-column">
+                                <input class="square-input square-input-md width-100 " type="text" id="lastName">
+                                <label class="square-input-label" for="lastName">Soyad</label>
+                            </div>
+
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-sq">Güncelle</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>

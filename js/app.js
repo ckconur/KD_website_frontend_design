@@ -44,10 +44,9 @@ function outsideClick(ev) {
     }
 }
 
-function makeChart() {
-    let myChart = document.getElementById('my-chart').getContext('2d');
-
-    let massPopChart = new Chart(myChart, {
+function makeChart(chartCanvas) {
+    
+    let massPopChart = new Chart(chartCanvas, {
         type: 'doughnut',
         data: {
             labels: ['Boston', 'Worchester', 'Springfield', 'Cambridge', 'New Bedford'],

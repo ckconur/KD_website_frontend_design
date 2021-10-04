@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/css/mystyle.css">
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+        integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <section class="com-manager-page">
+        <div>
+            <div class="side-bar">
+                <div>
+                    <img src="/images/kd_logo_white.png" alt="">
+                    <h2 class="as-center">KD-34</h2>
+                </div>
+                <hr>
+                <ul>
+                    <li><a href="admin.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                    <li><a href="adminmembers.html"><i class="fas fa-users "></i>Şirketler</a></li>
+                    <li><a href="admindescribing.html"><i class="fas fa-plane "></i>Tanımlamalar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header">
+                <h2>Admin</h2>
+
+                <input type="checkbox" name="" id="dropdown-toggle" class="dropdown-toggle">
+                <div class="dropdown-task">
+                    <ul>
+                        <li><a href="admin.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                        <li><a href="adminmembers.html"><i class="fas fa-users "></i>Şirketler</a></li>
+                        <li><a href="admindescribing.html"><i class="fas fa-plane "></i>Tanımlamalar</a></li>
+                    </ul>
+                </div>
+                <label for="dropdown-toggle" class="dropdown-toggle-label">
+                    <span><i class="fas fa-plus fa-2x as-center"></i></span>
+                </label>
+            </div>
+            <hr>
+
+            <div class="employee-details" >
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-chart-bar"></i> Çalışan Dağılımı</h3>
+                        <span>X</span>
+                    </div>
+                    <div class="content">
+                        <canvas id="employeesByCompany"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <span>Toplam Çalışan Sayısı 3000</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-chart-bar"></i> Çalışan Dağılımı</h3>
+                        <span>X</span>
+                    </div>
+                    <div class="content">
+                        <canvas id="managersByCompany"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <span>Toplam Şirket Yöneticisi Sayısı 3000</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-chart-bar"></i> Çalışan Dağılımı</h3>
+                        <span>X</span>
+                    </div>
+                    <div class="content">
+                        <canvas id="membersOfSite"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <span>Toplam Abone Şirket Sayısı 15</span>
+                        <span>Toplam Abonelikten Çıkan Şirket Sayısı 2</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-umbrella-beach"></i> Resmi Tatiller Listesi</h3>
+                        <span>X</span>
+                    </div>
+                    <div class="content">
+                        <div class="d-flex jc-between fs-xs mb-1">
+                            <span>Cumhuriyet Baramı Arifesi</span>
+                            <span>28 Ekim 2021</span>
+                        </div>
+
+                        <div class="d-flex jc-between fs-xs mb-1">
+                            <span>Cumhuriyet Baramı</span>
+                            <span>29 Ekim 2021</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div>
+                <table class="table table-striped width-100">
+                    <thead>
+                        <tr>
+                            <th>Şirket Adı</th>
+                            <th>Başlangıç Tarihi</th>
+                            <th>Kalan Gün</th>
+                            <th>İşlem</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Çikolatacım</td>
+                            <td>28 Ekim 1996</td>
+                            <td>2</td>
+                            <td>
+                                <button class="btn btn-danger btn-xs btn-sq">Sonlandır</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Çikolatacım</td>
+                            <td>28 Ekim 1996</td>
+                            <td>2</td>
+                            <td>
+                                <button class="btn btn-danger btn-xs btn-sq">Sonlandır</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Çikolatacım</td>
+                            <td>28 Ekim 1996</td>
+                            <td>2</td>
+                            <td>
+                                <button class="btn btn-danger btn-xs btn-sq">Sonlandır</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Çikolatacım</td>
+                            <td>28 Ekim 1996</td>
+                            <td>2</td>
+                            <td>
+                                <button class="btn btn-danger btn-xs btn-sq">Sonlandır</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Çikolatacım</td>
+                            <td>28 Ekim 1996</td>
+                            <td>2</td>
+                            <td>
+                                <button class="btn btn-danger btn-xs btn-sq">Sonlandır</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
+
+<script>
+    makeChart('employeesByCompany');
+    makeChart('managersByCompany');
+    makeChart('membersOfSite');
+</script>

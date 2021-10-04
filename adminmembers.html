@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company List</title>
+    <link rel="stylesheet" href="/css/mystyle.css">
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="listpage d-flex">
+
+        <!-- Side Bar -->
+
+        <div>
+            <div class="side-bar">
+                <div>
+                    <img src="/images/kd_logo_white.png" alt="">
+                    <h2 class="as-center">KD-34</h2>
+                </div>
+
+                <hr>
+
+                <ul>
+                    <li><a href="admin.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                    <li><a href="adminmembers.html"><i class="fas fa-users "></i>Şirketler</a></li>
+                    <li><a href="admindescribing.html"><i class="fas fa-plane "></i>Tanımlamalar</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <!-- Header -->
+
+            <div class="header">
+                <h2>Admin</h2>
+
+                <input type="checkbox" name="" id="dropdown-toggle" class="dropdown-toggle">
+                <div class="dropdown-task">
+                    <ul>
+                        <li><a href="admin.html"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                        <li><a href="adminmembers.html"><i class="fas fa-users "></i>Şirketler</a></li>
+                        <li><a href="admindescribing.html"><i class="fas fa-plane "></i>Tanımlamalar</a></li>
+                    </ul>
+                </div>
+                <label for="dropdown-toggle" class="dropdown-toggle-label">
+                    <span><i class="fas fa-plus fa-2x as-center"></i></span>
+                </label>
+            </div>
+            <hr>
+
+            <!-- Content Body -->
+
+            <div class="py-4">
+
+                <!-- Funtionality -->
+
+                <div class="func-list-page mb-2">
+
+                    <!-- Search Bar -->
+                    <input type="text" class="square-input square-input-md" placeholder="Arama">
+
+                </div>
+
+                <!-- Card List -->
+
+                <div>
+                    <div class="card-grid">
+                        <a href="/admincompanyeditpanel.html" class="c-card width-100">
+                            <div class="c-card-header">
+                                <img src="/images/profile-user.png" alt="">
+                            </div>
+                            <div class="c-card-body">
+                                <span>Çikolatacım</span>
+                                <span>Wilyy Wonka</span>
+                                <span class="btn btn-success btn-xs">Mail Doğrulaması Yapıldı</span>
+                                <span>Çalışan Sayısı: 2000</span>
+                                <span> &nbsp; </span>
+                            </div>
+                        </a>
+                        <a href="/admincompanyeditpanel.html" class="c-card width-100">
+                            <div class="c-card-header">
+                                <img src="/images/profile-user.png" alt="">
+                            </div>
+                            <div class="c-card-body">
+                                <span>Şirket Adı: Osmanlı Nargile</span>
+                                <span>Yönetici Adı: Osman Tuğra</span>
+                                <span class="btn btn-warning btn-xs">Mail Doğrulaması Bekleniyor</span>
+                                <span>xd@gmail.com</span>
+                                <span> &nbsp; </span>
+                            </div>
+                        </a>                     
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <div class="crud-modal" id="addEmployeeModal">
+        <div class="modal-inside">
+            <div class="d-flex jc-between ai-center mb-3">
+                <h4>Zimmet Ekle</h4>
+                <span class="btnCloseModal" onclick="closeModal('addEmployeeModal')">&times;</span>
+            </div>
+
+            <div class="modal-content">
+                <!-- Put What u Want -->
+                <div class="my-3 d-flex">
+
+                    <div class="mr-1">
+                        <label for="firstName" class="square-input-label">Ad</label>
+                        <input type="text" class="square-input" id="firstName">
+                    </div>
+
+                    <div>
+                        <label for="lastName" class="square-input-label">Soyad</label>
+                        <input type="text" class="square-input" id="lastName">
+                    </div>
+                </div>
+
+                <div class="my-3 d-flex">
+                    <div class="mr-1">
+                        <label for="title" class="square-input-label">Ünvan</label>
+                        <input type="text" class="square-input" id="title">
+                    </div>
+
+                    <div>
+                        <label for="email" class="square-input-label">Mail Adresi</label>
+                        <input type="mail" class="square-input" id="email">
+                    </div>
+                </div>
+
+                <div class="my-3 d-flex">
+                    <div class="mr-1">
+                        <label for="phoneNumber" class="square-input-label">Telefon</label>
+                        <input type="tel" class="square-input" id="phoneNumber">
+                    </div>
+                </div>
+
+                <div class="my-3 d-flex">
+                    <div class="mr-1">
+                        <label for="birthDate" class="square-input-label">Doğum Tarihi</label>
+                        <input type="datetime-local" class="square-input" id="birthDate">
+                    </div>
+
+                    <div>
+                        <label for="startDate" class="square-input-label">İşe Başlama Tarihi</label>
+                        <input type="datetime-local" class="square-input" id="startDate">
+                    </div>
+                </div>
+
+
+
+                <div class="my-1">
+                    <a href="#" class="btn btn-primary ml-auto">Kaydet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
